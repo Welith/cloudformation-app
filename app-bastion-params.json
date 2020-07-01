@@ -1,0 +1,18 @@
+[
+	{
+		"ParameterKey": "EnvironmentName",
+		"ParameterValue": "AWS-Project"
+	},
+	{
+		"ParameterKey": "NetworkAccessIP",
+		"ParameterValue": "10.44.0.0/24"
+	},
+	{
+		"ParameterKey": "BastionHostSSHS3Bucket",
+		"ParameterValue": "udacity-bastion-host-key"
+	},
+	{
+		"ParameterKey": "BastionHostSSHKeyName",
+		"ParameterValue": "bastion-key"
+	}
+]

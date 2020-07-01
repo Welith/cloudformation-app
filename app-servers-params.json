@@ -8,10 +8,6 @@
         "ParameterValue": "s3://html-udacity/udacity.zip"
     },
     {
-        "ParameterKey": "KeyPairName",
-        "ParameterValue": "udacity-dev"
-    },
-    {
         "ParameterKey": "DesiredServerCapacity",
         "ParameterValue": "4"
     },
@@ -21,6 +17,6 @@
     },
     {
         "ParameterKey": "DesiredServerCapacityMax",
-        "ParameterValue": "4"
+        "ParameterValue": "5"
     }
 ]
