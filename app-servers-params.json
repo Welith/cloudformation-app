@@ -1,0 +1,26 @@
+[
+    {
+        "ParameterKey": "EnvironmentName",
+        "ParameterValue": "AWS-Project"
+    },
+    {
+        "ParameterKey": "AppS3Bucket",
+        "ParameterValue": "s3://html-udacity/udacity.zip"
+    },
+    {
+        "ParameterKey": "KeyPairName",
+        "ParameterValue": "udacity-dev"
+    },
+    {
+        "ParameterKey": "DesiredServerCapacity",
+        "ParameterValue": "4"
+    },
+    {
+        "ParameterKey": "DesiredServerCapacityMin",
+        "ParameterValue": "2"
+    },
+    {
+        "ParameterKey": "DesiredServerCapacityMax",
+        "ParameterValue": "4"
+    }
+]
