@@ -9,7 +9,7 @@
 	},
 	{
 		"ParameterKey": "BastionHostSSHS3Bucket",
-		"ParameterValue": "udacity-bastion-host-key"
+		"ParameterValue": "s3://udacity-bastion-host-key"
 	},
 	{
 		"ParameterKey": "BastionHostSSHKeyName",

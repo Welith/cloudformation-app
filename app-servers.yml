@@ -1,5 +1,5 @@
 Description: >
-  Boris Kolev / Udacity
+  Boris Kolev / Udagram
   App server deploy
 
 Parameters:
@@ -86,8 +86,6 @@ Resources:
           aws s3 cp ${AppS3Bucket} .
           unzip -o udacity.zip
       ImageId: ami-07b4f3c02c7f83d59
-      KeyName:
-        Fn::ImportValue: !Sub ${EnvironmentName}-BASTION-HOST-SSH-KEY-NAME
       IamInstanceProfile: !Ref IamInstanceProfile
       SecurityGroups:
         - Ref: WebServerSecGroup
@@ -191,6 +189,7 @@ Resources:
         - !Ref IamRole
 
 Outputs:
+
   WebAppLB:
     Description: Load Balancer DNS used to check correct functionality
     Value: !Join ["", ["http://", !GetAtt WebAppLB.DNSName]]

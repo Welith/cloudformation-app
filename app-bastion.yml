@@ -12,13 +12,15 @@ Parameters:
       Description: SSH access
       Type: String
 
-  BastionHostSSHS3Bucket:
+  BastionS3Bucket:
       Description: Bucket name for Application
       Type: String
+      Default: "s3://udacity-bastion-host-key"
 
   BastionHostSSHKeyName:
       Description: Bastion Host SSH Key Name
       Type: 'AWS::EC2::KeyPair::KeyName'
+      Default: 'bastion-key'
 
 Resources:
 
@@ -93,7 +95,7 @@ Resources:
           apt-get update -y
           apt-get install unzip awscli -y
           cd /home/ubuntu
-          aws s3 cp s3://${BastionHostSSHS3Bucket}/${BastionHostSSHKeyName}.pem /home/ubuntu
+          aws s3 cp ${BastionS3Bucket}/${BastionHostSSHKeyName}.pem /home/ubuntu
           chmod 400 ${BastionHostSSHKeyName}.pem
 
   EIP1:
@@ -137,7 +139,7 @@ Resources:
           apt-get update -y
           apt-get install unzip awscli -y
           cd /home/ubuntu
-          aws s3 cp s3://${BastionHostSSHS3Bucket}/${BastionHostSSHKeyName}.pem /home/ubuntu
+          aws s3 cp ${BastionHostSSHS3Bucket}/${BastionHostSSHKeyName}.pem /home/ubuntu
           chmod 400 ${BastionHostSSHKeyName}.pem
 
   EIP2:
